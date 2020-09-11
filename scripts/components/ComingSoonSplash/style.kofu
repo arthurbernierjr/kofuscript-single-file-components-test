@@ -1,0 +1,61 @@
+style =
+  page:
+    display: 'flex'
+    width: '100vw'
+    padding: '0.5rem'
+  formContainer:
+    display: 'flex'
+    flexDirection: 'column'
+    justifyContent: 'flex-start'
+    padding: '0 8rem 6rem 5rem'
+  formH1:
+    '&>span':
+      color: '#F8BFBF'
+      fontWeight: '200'
+    fontSize: '4rem'
+    textTransform: 'uppercase'
+    textAlign: 'left'
+    letterSpacing: '1.5rem'
+    marginBottom: '2rem'
+    fontWeight: '400'
+  formP:
+    color: '#F8BFBF'
+    textShadow: '0px 0px rgba(0, 0, 0, 0.7)'
+    marginBottom: '6rem'
+    textAlign: 'left'
+    fontSize: '1.2rem'
+    lineHeight: '2rem'
+    clampLine: '30'
+    width: '70%'
+  formLogo:
+    fontWeight: '700'
+    alignSelf: 'flex-start'
+    marginBottom: '5rem'
+  form:
+    display: 'flex'
+    width: '70%'
+  formButton:
+    backgroundColor: '#F8BFBF'
+    color: 'white'
+    marginLeft: '-6rem'
+    width: '7rem'
+    height: '5.5rem'
+    borderRadius: '1.5rem'
+    fontSize:'2rem'
+    boxShadow: '0 3px 8px rgba(0,0,0, 0.5)'
+  formInput:
+    width: '100%'
+    borderRadius: '2rem'
+    padding: '1rem 0 1rem 2rem'
+    fontSize: '2.5rem'
+    fontWeight: '100'
+    '&:focus':
+      fontWeight: '400'
+  pageHero:
+    height: '100vh'
+    width: '50vw'
+    '& > img':
+      width: '100%'
+      height: '100%'
+
+module.exports = style

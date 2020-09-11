@@ -1,0 +1,19 @@
+makeStyles = require '@/utils/styleCreator.kofu'
+styleObject = require './style.kofu'
+classNames = makeStyles(styleObject)
+component =
+  data: ->
+      name: 'Arthur'
+      email: ''
+      classNames: classNames
+
+  computed: {}
+
+  methods:
+    handleSubmit: (event) ->
+      event.preventDefault()
+      present @email
+      @email = ''
+
+
+module.exports = component

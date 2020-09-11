@@ -1,0 +1,10 @@
+jss = require 'jss'
+preset = require 'jss-preset-default'
+
+makeStyles = (styles)->
+  jss.setup(preset())
+  sheet = jss.createStyleSheet(styles)
+  {classes} = sheet.attach()
+  classes
+
+module.exports = makeStyles
