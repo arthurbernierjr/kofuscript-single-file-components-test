@@ -4,19 +4,22 @@
   "description": "My premium Nuxt.js project",
   "author": "Arthur",
   "private": true,
+  "main": "server.kofu",
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "build:nuxt": "nuxt build",
+    "start:nuxt": "nuxt start",
+    "build": "nuxt generate",
+    "start": "kofu server.kofu"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "jss": "^10.4.0",
     "jss-preset-default": "^10.4.0",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "kofuscript": "0.1.0-beta3"
   },
   "devDependencies": {
-    "kofu-loader": "^1.0.0",
-    "kofuscript": "0.1.0-beta3"
+    "kofu-loader": "^1.0.0"
   }
 }
