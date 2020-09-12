@@ -1,14 +1,15 @@
 makeStyles = require '@/utils/styleCreator.kofu'
 styleObject = require './style.kofu'
-classNames = makeStyles(styleObject)
+
 component =
   data: ->
       name: 'Arthur'
       email: ''
-      classNames: classNames
+      classNames: {}
 
   computed: {}
-
+  mounted: ->
+    @classNames = makeStyles(styleObject)
   methods:
     handleSubmit: (event) ->
       event.preventDefault()

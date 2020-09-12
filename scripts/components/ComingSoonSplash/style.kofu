@@ -20,7 +20,7 @@ style =
     fontWeight: '400'
   formP:
     color: '#F8BFBF'
-    textShadow: '0px 0px rgba(0, 0, 0, 0.7)'
+    textShadow: '0px 0px rgba(0, 0, 0, 0.8)'
     marginBottom: '6rem'
     textAlign: 'left'
     fontSize: '1.2rem'
@@ -31,6 +31,7 @@ style =
     fontWeight: '700'
     alignSelf: 'flex-start'
     marginBottom: '5rem'
+    marginTop: '1.5rem'
   form:
     display: 'flex'
     width: '70%'
