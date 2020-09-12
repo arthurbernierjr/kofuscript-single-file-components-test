@@ -1,0 +1,16 @@
+blueprint Component
+
+  data :: Function
+  methods :: Object
+  computed :: Object
+  rest :: Object
+
+  constructor :: Function * Object * Object -> ()
+
+  constructor: (data, methods, computed, rest) ->
+    @data = data
+    @methods = methods
+    @computed = computed
+    @rest = rest
+
+module.exports = Component 

@@ -21,15 +21,19 @@ app.listen PORT
 
 ### Structure
 
-1. Pages : This directory contains your Application Views and Routes.
+### Pages
+1. This directory contains your Application Views and Routes.
 The framework reads all the `*.vue` files inside this directory and creates the router of your application.
-1.  Scripts
-  1. components : The components directory contains  SubFolders for each component
-    1. index.vue : This contains the VUE SFC file with the Template and Script Tag. The Script tag will import the .kofu file
-    1. script.kofu : This contains the Vue Application Logic written in KOFUSCRIPT
-    1. styles.kofu : This contains the Styles for  the component written in CSS-IN-KOFUSCRIPT syntax
-  1. controllers: This directory contains the KOFUSCRIPT Controller for each page in the pages directory
-1. Utils : This directory contains utility functions , for example it now contains the makeStyles function which is used to inject the styles for the Vue Components into the dom
+###  Scripts
+#### components
+    1. The components directory contains  SubFolders for each component
+    1. index.vue for each component : This contains the VUE SFC file with the Template and Script Tag. The Script tag will import the .kofu file
+    1. script.kofu for each component : This contains the Vue Application Logic written in KOFUSCRIPT
+    1. styles.kofu for each component : This contains the Styles for  the component written in CSS-IN-KOFUSCRIPT syntax
+#### Controllers
+  1. This directory contains the KOFUSCRIPT Controller for each page in the pages directory
+### Utils  
+  1. This directory contains utility functions , for example it now contains the makeStyles function which is used to inject the styles for the Vue Components into the dom
 
 ## Configuration Nuxt.config.js and Kofu-Loader
 
@@ -93,4 +97,73 @@ The framework reads all the `*.vue` files inside this directory and creates the 
 
  ```
 
- 
+# pages/index.vue
+
+```vue
+<template>
+  <div class="container">
+    <ComingSoonSplash />
+  </div>
+</template>
+
+<script>
+import component from '@/scripts/controllers/index.kofu'
+import ComingSoonSplash from '@/scripts/components/ComingSoonSplash'
+export default {
+  ...component,
+  ...{
+    components:
+    {
+      ComingSoonSplash
+    }
+  }
+}
+</script>
+
+<style>
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  display: block;
+  font-weight: 300;
+  font-size: 100px;
+  color: #35495e;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 42px;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+}
+
+.links {
+  padding-top: 15px;
+}
+</style>
+
+```
+
+## scripts/controllers/index.kofu
+
+```coffee
+component =
+  data: ->
+    name: 'arthur'
+  methods:
+    changeName: (event)->
+      @name = event.target.value
+
+module.exports = component
+```

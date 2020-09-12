@@ -4,5 +4,5 @@ component =
   methods:
     changeName: (event)->
       @name = event.target.value
-      
+
 module.exports = component
